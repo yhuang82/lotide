@@ -18,6 +18,9 @@ const assertEqual = function(actual, expected) {
 
 // FUNCTION IMPLEMENTATION
 const eqArrays = function(actualArr, expectedArr) {
+  if (actualArr.length !== expectedArr.length) {
+    return false;
+  }
   for (let i = 0; i < actualArr.length; i++) {
     if (actualArr[i] !== expectedArr[i]) {
       return false;
@@ -30,13 +33,13 @@ const eqArrays = function(actualArr, expectedArr) {
 console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
 console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
 
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
+console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
+console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // 
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true); // 
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true);
 
 console.log(eqArrays([[1,2]], [[1,2]])); // => true
 

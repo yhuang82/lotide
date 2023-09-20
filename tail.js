@@ -7,6 +7,13 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+const tail = function(arr) {
+  if (arr.length <= 1) {
+    return [];
+  }
+  return arr.slice(1);
+};
+
 
 // Test Case 1: Check the returned array elements
 const result = tail(["Hello", "Lighthouse", "Labs"]);
@@ -17,9 +24,3 @@ assertEqual(result[1], "Labs"); // ensure second element is "Labs"
 // Test Case 2: ...
 // ...
 
-
-// TEST CASES
-assertArraysEqual(tail([5,6,7]), [6,7]);  // Should pass
-assertArraysEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);  // Should pass
-assertArraysEqual(tail(["Hello"]), []);  // Should pass
-assertArraysEqual(tail([]), []);  // Should pass
