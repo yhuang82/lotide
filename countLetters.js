@@ -12,11 +12,13 @@ const countLetters = (sentence) => {
   const sentenceWithoutSpaces = sentence.replace(/\s/g, '');
   const result = {};
   for (let item of sentenceWithoutSpaces) {
-    if (result[item]) {
-      result[item] += 1;
-    } else {
-      result[item] = 1;
+    if (item === " ") {
+      continue;
     }
+    if (!result[item]) {
+      result[item] = 0;
+    }
+    result[item] ++;
   }
   return result;
 };

@@ -1,18 +1,42 @@
-const letterPositions = function(sentence) {
-  const results = {};
+// const letterPositions = function(sentence) {
+//   const results = {};
+//   // logic to update results here
+//   for (let i = 0; i < sentence.length; i++) {
+//     if (sentence[i] !== " ") {
+//       if (results[sentence[i]]) {
+//         results[sentence[i]].push(i);
+//       } else {
+//         results[sentence[i]] = [i];
+//       }
+//     }
+//   }
+
+//   return results;
+// };
+
+
+
+
+const letterPositions = function(str) {
+  const result = {};
   // logic to update results here
-  for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i] !== " ") {
-      if (results[sentence[i]]) {
-        results[sentence[i]].push(i);
-      } else {
-        results[sentence[i]] = [i];
-      }
+  for (const i in str) {
+    const letter = str[i];
+
+    if (i === " ") {
+      continue;
+    }
+
+    if (!result[letter]) {
+      result[letter] = [Number(i)];
+    } else {
+      result[letter].push(Number(i));
     }
   }
-
-  return results;
+  return result;
 };
+
+
 
 console.log(letterPositions("lighthouse in the house"));
 console.log("-------------------------------------------------");
