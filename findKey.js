@@ -25,7 +25,6 @@ const findKey = (inputObj, callback) => {
 };
 
 
-
 const cb = x => x.stars === 2;
 const obj = {
   "Blue Hill": { stars: 1 },
