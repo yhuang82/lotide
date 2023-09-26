@@ -46,6 +46,6 @@ assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);
 assertArraysEqual(results2, [1, 4, 9, 16]);
 assertArraysEqual(results3, [6, 7, 2, 5, 3]);
 
-
+module.exports = map;
 
 

@@ -27,3 +27,5 @@ const countLetters = (sentence) => {
 console.log(countLetters("lighthouse in the house"));
 assertEqual(countLetters("Jason")["J"], 1);
 assertEqual(countLetters("Karima is a abc")["a"], 4);
+
+module.exports = assertEqual;

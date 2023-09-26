@@ -39,3 +39,5 @@ assertEqual(result, "noma");
 
 
 // falsey: "", 0, null, undefined, Nan, false
+
+module.exports = findKey;

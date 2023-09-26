@@ -51,3 +51,5 @@ const assertObjectsEqual = function(actual, expected) {
 const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
 const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
 assertObjectsEqual(multiColorShirtObject, anotherMultiColorShirtObject);
+
+module.exports = assertObjectsEqual;
